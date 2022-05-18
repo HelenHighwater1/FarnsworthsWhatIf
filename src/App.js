@@ -27,12 +27,20 @@ function App() {
     ) ;
   }
   
+  const screen = () => {
+    if (!result){
+     return <span className = 'spinner-loader'></span>
+    }
+     else {
+       return <p className="result">{result[0]}</p>
+     }
 
+  }
 
 
   return (
     <div className="App">
-      <h1>Welcome to Farnsworth's What If Machine!</h1>
+      <h1>Welcome to Farnsworth's 'What If' Machine!</h1>
       <p>Good news everyone!  Thanks to OpenAi, the What If machine is up and running on the internet!</p>
       <div className="machine">
         <form onSubmit={(e) => {
@@ -43,11 +51,21 @@ function App() {
         <input type="text" placeholder="What if..." onChange={(e) => setText(e.target.value)}></input>
         <input disabled={text === ""} type='submit' value ='submit'></input>
 
-      </form>
-      <p className="result">{result[0]}</p>
+        </form>
 
+        <p className="result">{result[0]}</p>
       </div>
-
+      
+      {/* <div className='footer'>
+            <div className="footer-links">
+                
+                <a className="footer-link" onClick={() => window.open('https://github.com/HelenEdwards')}><img src="assets/logo_github_icon_143196.png" title="github"/></a>
+                <a className="footer-link" onClick={() => window.open("https://www.linkedin.com/in/helen-edwards-96981532/")}><img src="assets/LinkedIn_icon-icons.com_66270.png" title="linkendin" /></a>
+                <a className="footer-link" onClick={() => window.open("https://heyimhelen.com")}><img src="assets/resume-icon.png" title="portfolio site"/></a>
+                
+            </div>
+        </div>   */}
+          
     </div>
 
   );
