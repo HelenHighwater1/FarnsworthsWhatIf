@@ -6,4 +6,3 @@ Curious about what people have to say? Take a look now at the [live site](https:
 
 ![screen-grab](public/screengrab.png)
 
-## Features
