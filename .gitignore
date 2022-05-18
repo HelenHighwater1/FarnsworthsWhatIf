@@ -11,7 +11,7 @@ config/keys/keys_dev.js
 /coverage
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store
