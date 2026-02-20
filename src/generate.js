@@ -1,14 +1,3 @@
-import { Configuration, OpenAIApi } from "openai";
-
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
-
-export default async function (req, res) {
-  const completion = await openai.createCompletion("text-davinci-002", {
-    prompt:req.body.text,
-    temperature: 0.6,
-  });
-  res.status(200).json({ result: completion.data.choices[0].text });
-}
+// The OpenAI API call has been moved to server.js (project root).
+// The key is read server-side from the OPENAI_API_KEY environment variable,
+// so it is never exposed to the browser.
