@@ -21,16 +21,6 @@ function App() {
     }
   };
   
-  const screen = () => {
-    if (!result){
-     return <span className = 'spinner-loader'></span>
-    }
-     else {
-       return <p className="result">{result[0]}</p>
-     }
-
-  }
-
 
   return (
     <div className="App">
